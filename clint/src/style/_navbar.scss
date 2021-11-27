@@ -5,3 +5,23 @@
     color: violet;
     background-color: $primary;
 }
+.top-notice{
+    background-color: $primary;
+    padding: 0 !important;
+    height: 53px;
+    color: white;
+}
+.top-navbar{
+    height: 120px;
+}
+.nav-buttonbg{
+    background-color: #F8F8F8;
+    border-radius: 12px;
+}
+.navbar-iterm3{
+    padding-right: 5.5rem;
+}
+.navbar-iterm3 .nav-link{
+    padding-right: 2.5rem !important;
+
+}
