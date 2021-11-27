@@ -11,6 +11,9 @@ const passport = require('passport');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const productRoute = require('./routes/products')
+
+
 
 // mongodb
 const mongoconnect = mongoose.connect(process.env.DB_URL);
@@ -38,6 +41,7 @@ app.use(passport.initialize());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/product', productRoute);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -54,5 +58,7 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
 
 module.exports = app;
