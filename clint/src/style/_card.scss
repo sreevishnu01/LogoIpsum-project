@@ -1,0 +1,56 @@
+@use 'custom' as *;
+
+// card grid for fix height
+
+  .card-grid-lg{
+    height: 460px;
+  }
+  .card-grid-sm{
+    height: calc(280px - calc(var(--bs-gutter-y) / 2));
+  }
+@include media-breakpoint-down(md) {
+  .card-grid .card-grid-lg{
+    height: 400px;
+  }
+}
+
+.card{
+  border-radius: 0.7rem;
+}
+.card-ct{
+  border-top-left-radius: 0.7rem !important;
+  border-top-right-radius: 0.7rem !important;
+}
+
+// card size
+
+.card-md{
+  height: 466px;
+}
+// card background color
+
+.card-bg-img{
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 0.7rem !important;
+  
+}
+.text-reset{
+  text-decoration: none;
+}
+// card border
+
+.border-light{
+  border-color: white;
+}
+.border-none{
+  border: none;
+}
+
+// text color
+
+.text-primary{
+  color: $primary;
+}

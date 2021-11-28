@@ -20,3 +20,12 @@ $theme-colors: (
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 // Then add additional custom code here
+
+// margin
+.ml-5{
+  margin-left: ($spacer * 1.45) !important;
+}
+
+.bg-color-gry{
+  background-color: #E5E5E5;
+}

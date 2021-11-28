@@ -5,7 +5,6 @@ import { Nav, Navbar, NavDropdown, Container } from 'react-bootstrap'
 function Navbar1() {
     return (
         <>
-            <Topbar />
             <Navbar bg="light" expand="lg">
                 <Container className="mb-5">
                     <Nav onSelect className="me-5">

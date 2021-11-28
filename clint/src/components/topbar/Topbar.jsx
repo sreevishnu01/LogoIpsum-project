@@ -1,5 +1,5 @@
 import React from 'react'
-import { Nav, Navbar, NavDropdown, Container, Button, Form, FormControl } from 'react-bootstrap'
+import { Nav, Navbar, NavDropdown, Container, Button, Form, FormControl, NavLink } from 'react-bootstrap'
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaHeart, FaShoppingCart, FaUser } from "react-icons/fa"
 // import { BsCurrencyDollar } from "react-icons/bs";
 
@@ -12,14 +12,14 @@ function Topbar() {
                 <Container>
                     <Nav>
                         <Nav.Link href="#deets"><FaPhoneAlt color="white" />+221336622</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
+                        <Nav.Link href="#memes">
                             <FaEnvelope color="white" /> support@elextra.io
                         </Nav.Link>
                     </Nav>
 
                     <Nav>
                         <Nav.Link href="#deets"><FaMapMarkerAlt color="white" />Locations</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
+                        <Nav.Link href="#memes">
                             $ Dollar (US)
                         </Nav.Link>
                         <NavDropdown title="EN" id="basic-nav-dropdown">
@@ -58,14 +58,15 @@ function Topbar() {
                     </Nav>
                     <Nav className="navbar-iterm3 mr-5">
                         <Nav.Link href="#deets"><FaHeart color="red" /></Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
+                        <Nav.Link href="/cart">
                             <FaShoppingCart />
                         </Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
+                        <Nav.Link href="/login">
                             <FaUser />
                         </Nav.Link>
                     </Nav>
                     <Button variant="secondary" className="secondary">Classifieds</Button>
+
 
                 </Container>
             </Navbar >

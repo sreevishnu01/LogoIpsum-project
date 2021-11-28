@@ -1,12 +1,20 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+
+import Classified from './products/Classified'
+import Flash from './products/Flash'
+import Recommended from './products/Recommended'
+import data from '../../Assets/data'
+import Bestdeal from './products/Bestdeal'
 
 function Main() {
+    const { products } = data;
+    console.log(products)
     return (
         <>
-            <Container className="mt-5">
-                <h1>Best deal</h1>
-            </Container>
+            <Bestdeal products={products} />
+            <Classified products={products} />
+            <Recommended />
+            <Flash />
         </>
     )
 }
