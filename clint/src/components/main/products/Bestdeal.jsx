@@ -1,28 +1,32 @@
-import React from 'react'
-import { Container, Row, Col, Card, Button } from "react-bootstrap"
+import { Container, Row, Col, Card } from "react-bootstrap"
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 
 function Bestdeal(props) {
-    const { products } = props;
-    const randomImg = {
-        imagel: 'https://picsum.photos/1000/750',
-        images: 'https://picsum.photos/100',
 
-    }
-    console.log(products)
+    const [post, setPost] = useState([])
+    useEffect(() => {
+        const getPost = async () => {
+            const res = await axios("/product");
+            setPost(res.data);
+        }
+        getPost()
+    }, []);
+
     return (
         <div>
             <Container className="my-5">
                 <h1>Best deal</h1>
                 <Row className="mt-5">
-                    {products.map(p => (
-                        <Col key={p._id} >
+                    {post.map(p => (
+                        <Col key={p._id}>
 
                             <Card className="border-light mb-4">
                                 <Row >
 
                                     <Col>
                                         <Card className="border-light">
-                                            <Card.Img src={p.url} />
+                                            <Card.Img src={p.img} />
                                         </Card>
 
                                     </Col>
@@ -30,7 +34,7 @@ function Bestdeal(props) {
                                         <Card className="border-light">
                                             <Card.Body>
                                                 <Card.Title >
-                                                    <Card.Link href={`/blog/${p._id}`} className="text-reset" >{p.name}</Card.Link>
+                                                    <Card.Link href={`/product/${p._id}`} className="text-reset" >{p.name}</Card.Link>
                                                 </Card.Title>
                                                 <Card.Subtitle className="text-primary">${p.price}</Card.Subtitle>
                                                 <Card.Text className="text-primary">
@@ -54,44 +58,7 @@ function Bestdeal(props) {
 
                 {/* second */}
 
-                <Row className="mt-5">
-                    {products.map(p => (
-                        <Col key={p._id} >
 
-                            <Card className="border-light mb-4">
-                                <Row >
-
-                                    <Col>
-                                        <Card className="border-light">
-                                            <Card.Img src={p.url} />
-                                        </Card>
-
-                                    </Col>
-                                    <Col >
-                                        <Card className="border-light">
-                                            <Card.Body>
-                                                <Card.Title >
-                                                    <Card.Link href={`/blog/${p._id}`} className="text-reset" >{p.name}</Card.Link>
-                                                </Card.Title>
-                                                <Card.Subtitle className="text-primary">${p.price}</Card.Subtitle>
-                                                <Card.Text className="text-primary">
-                                                    review
-                                                </Card.Text>
-                                            </Card.Body>
-                                        </Card>
-
-
-                                    </Col>
-
-                                </Row>
-                            </Card>
-
-
-
-
-                        </Col>
-                    ))}
-                </Row>
             </Container>
         </div >
     )

@@ -6,7 +6,7 @@
 $theme-colors: (
   "primary":    #0074d9,
   "secondary":  #00C6D7,
-  
+  "Danger": #ea1a0b,
 );
 
 // "light":      $light,
@@ -20,7 +20,9 @@ $theme-colors: (
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 // Then add additional custom code here
-
+.Danger{
+  color: #ea1a0b,;
+}
 // margin
 .ml-5{
   margin-left: ($spacer * 1.45) !important;

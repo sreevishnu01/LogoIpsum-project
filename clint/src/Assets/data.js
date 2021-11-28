@@ -10,7 +10,7 @@ const data = {
             quantity: 1,
         },
         {
-            id: 2,
+            _id: 2,
             name: "Product 2",
             price: 2,
             url:
@@ -19,7 +19,7 @@ const data = {
             quantity: 1,
         },
         {
-            id: 3,
+            _id: 3,
             name: "Product 3",
             price: 3,
             url:
@@ -28,7 +28,7 @@ const data = {
             quantity: 1,
         },
         {
-            id: 4,
+            _id: 4,
             name: "Product 3",
             price: 3,
             url:

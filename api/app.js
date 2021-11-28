@@ -6,6 +6,7 @@ var logger = require('morgan');
 const mongoose = require('mongoose');
 require('dotenv').config();
 const passport = require('passport');
+const cors = require('cors');
 
 
 
@@ -24,6 +25,14 @@ mongoconnect.then((db) => {
 
 
 var app = express();
+
+// cors
+app.use(
+  cors({
+    origin: "*"
+  }
+  ))
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

@@ -1,11 +1,13 @@
 import React from 'react'
-import { Nav, Navbar, NavDropdown, Container, Button, Form, FormControl, NavLink } from 'react-bootstrap'
+import { Nav, Navbar, NavDropdown, Container, Button, Form, FormControl } from 'react-bootstrap'
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaHeart, FaShoppingCart, FaUser } from "react-icons/fa"
+import { useSelector } from 'react-redux'
 // import { BsCurrencyDollar } from "react-icons/bs";
 
 
 function Topbar() {
 
+    const { totalQuntity } = useSelector(state => state.cart)
     return (
         <>
             <Navbar variant="dark" className="top-notice">
@@ -36,7 +38,7 @@ function Topbar() {
                 <Container >
                     <Navbar.Brand href="/">
                         <img
-                            src='./images/logo61.png'
+                            src='/images/logo61.png'
                             width="258"
                             height="145"
                             className="d-inline-block align-top"
@@ -59,9 +61,9 @@ function Topbar() {
                     <Nav className="navbar-iterm3 mr-5">
                         <Nav.Link href="#deets"><FaHeart color="red" /></Nav.Link>
                         <Nav.Link href="/cart">
-                            <FaShoppingCart />
+                            <FaShoppingCart /><span className="Danger">{totalQuntity}</span>
                         </Nav.Link>
-                        <Nav.Link href="/login">
+                        <Nav.Link href="/">
                             <FaUser />
                         </Nav.Link>
                     </Nav>

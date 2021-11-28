@@ -5,10 +5,12 @@ import { Provider } from 'react-redux'
 import App from './App';
 import './index.scss'
 import userReducer from './redux/auth'
+import cartReducer from './redux/productCart';
 
 const store = configureStore({
   reducer: {
-    user: userReducer
+    user: userReducer,
+    cart: cartReducer
   },
 });
 

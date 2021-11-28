@@ -8,10 +8,9 @@ import Bestdeal from './products/Bestdeal'
 
 function Main() {
     const { products } = data;
-    console.log(products)
     return (
         <>
-            <Bestdeal products={products} />
+            <Bestdeal />
             <Classified products={products} />
             <Recommended />
             <Flash />

@@ -4,19 +4,7 @@ import { useState } from 'react'
 
 function Carousels() {
 
-    const randomImg = [
-        {
-            "image": "./images/Rectangle.png"
-        }, {
-            "image": "./images/placeholder.png"
-        }
 
-        , {
-            "image": "./images/placeholder1.png"
-        }
-
-    ]
-    // imagel: 'https://picsum.photos/1620/612',
 
 
     const [index, setIndex] = useState(0);
