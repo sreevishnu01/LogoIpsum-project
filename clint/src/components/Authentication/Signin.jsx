@@ -1,8 +1,9 @@
-import { Form, Container, Button, Row, Col } from 'react-bootstrap'
+import { Form, Container, Button, Row, Col, NavLink } from 'react-bootstrap'
 import axios from '../../Assets/axiosconfig'
 import { useState } from 'react'
 
 function Signin() {
+
 
     const [firstname, setFirstname] = useState("")
     const [lastname, setLastname] = useState("")
@@ -69,6 +70,7 @@ function Signin() {
                         <Button variant="primary" type="submit" onClick={handleSignin} >
                             Submit
                         </Button>
+                        <NavLink href='/'>Login</NavLink>
                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
                             {error && <Form.Text id="passwordHelpBlock" muted>
                                 Your password must be 8-20 characters long, contain letters and numbers, and

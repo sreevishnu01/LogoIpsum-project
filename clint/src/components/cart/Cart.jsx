@@ -33,8 +33,6 @@ function Cart() {
                     <h1 className="d-flex justify-content-center">My Cart</h1>
                     <Row>
 
-
-
                         <Col lg={9}>
                             {cart.cartitems.map(c => (
                                 <Card key={c._id} className="border-light card-shadow mb-4">
@@ -55,7 +53,6 @@ function Cart() {
                                                     <Card.Text>price:${c.price}</Card.Text>
                                                     <Card.Text>Quantity:{c.cartQuantity}</Card.Text>
                                                     <Card.Text>SubTotal:${c.price * c.cartQuantity}</Card.Text>
-                                                    <Card.Text>SubTotal:${c.totalAmount}</Card.Text>
                                                     <Button variant="Danger" onClick={() => dispatch(onDecrease(c))}>-</Button>
                                                     <Button className="ml-5" variant="primary" onClick={() => dispatch(onAdd(c))}>+</Button>
                                                 </Card.Body>

@@ -14,23 +14,6 @@ function Carousels() {
     };
     return (
 
-        // <>
-        //     <Container>
-        //         <div className="carousels">
-        //             {randomImg.map((item, index) => (
-        //                 <div key={index} className="carousel">
-        //                     <img src={item.image} alt="aa" />
-        //                     <p>From students to senior citizens
-        //                         this web portal of
-        //                         "Products and Classifieds”
-        //                         provides it all</p>
-        //                 </div>
-        //             ))}
-
-        //         </div>
-        //     </Container>
-        // </>
-
         <Container>
             <div >
                 <Carousel activeIndex={index} onSelect={handleSelect} className="carousel">

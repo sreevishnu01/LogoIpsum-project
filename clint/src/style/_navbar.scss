@@ -15,6 +15,7 @@
     height: 120px;
 }
 .nav-buttonbg{
+
     background-color: #F8F8F8;
     border-radius: 12px;
 }
@@ -24,4 +25,11 @@
 .navbar-iterm3 .nav-link{
     padding-right: 2.5rem !important;
 
+}
+.c-white{
+    color: white !important;
+}
+
+.c-white #basic-nav-dropdown{
+    color: white !important;
 }

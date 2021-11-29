@@ -1,30 +1,39 @@
 import React from 'react'
 import { Nav, Navbar, NavDropdown, Container, Button, Form, FormControl } from 'react-bootstrap'
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaHeart, FaShoppingCart, FaUser } from "react-icons/fa"
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
+import { logOut } from '../../redux/auth';
 // import { BsCurrencyDollar } from "react-icons/bs";
 
 
 function Topbar() {
 
-    const { totalQuntity } = useSelector(state => state.cart)
+    const dispatch = useDispatch();
+    const handellogout = () => {
+        dispatch(logOut());
+    }
+
+    const { cart, user } = useSelector(state => state)
     return (
         <>
             <Navbar variant="dark" className="top-notice">
                 <Container>
                     <Nav>
-                        <Nav.Link href="#deets"><FaPhoneAlt color="white" />+221336622</Nav.Link>
-                        <Nav.Link href="#memes">
+                        <Nav.Link href="#deets" className="c-white"><FaPhoneAlt color="white" />+221336622</Nav.Link>
+                        <Nav.Link href="#memes" className="c-white">
                             <FaEnvelope color="white" /> support@elextra.io
                         </Nav.Link>
                     </Nav>
 
-                    <Nav>
-                        <Nav.Link href="#deets"><FaMapMarkerAlt color="white" />Locations</Nav.Link>
-                        <Nav.Link href="#memes">
+                    <Nav className="c-white">
+                        <Nav.Link href="#deets" className="c-white ml-5"><FaMapMarkerAlt color="white" />Locations</Nav.Link>
+                        <Navbar.Text className="c-white ml-5">
+                            |
+                        </Navbar.Text>
+                        <Nav.Link href="#memes" className="c-white ml-5">
                             $ Dollar (US)
                         </Nav.Link>
-                        <NavDropdown title="EN" id="basic-nav-dropdown">
+                        <NavDropdown title="EN" id="basic-nav-dropdown" className="ml-5">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
@@ -61,13 +70,19 @@ function Topbar() {
                     <Nav className="navbar-iterm3 mr-5">
                         <Nav.Link href="#deets"><FaHeart color="red" /></Nav.Link>
                         <Nav.Link href="/cart">
-                            <FaShoppingCart /><span className="Danger">{totalQuntity}</span>
+                            <FaShoppingCart /><span className="Danger">{cart.totalQuntity}</span>
                         </Nav.Link>
+
                         <Nav.Link href="/">
                             <FaUser />
                         </Nav.Link>
                     </Nav>
-                    <Button variant="secondary" className="secondary">Classifieds</Button>
+                    {user.token ? (
+                        <Button variant="secondary" onClick={handellogout} className="secondary">Logout</Button>
+                    ) : (
+                        <Button variant="secondary" className="secondary">Classifieds</Button>
+                    )}
+
 
 
                 </Container>
