@@ -1,6 +1,4 @@
 import { Container, Row, Col, Card } from "react-bootstrap"
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
 import { IconContext } from "react-icons";
 import { FaStar } from "react-icons/fa"
 
@@ -8,15 +6,6 @@ import { FaStar } from "react-icons/fa"
 
 function Bestdeal(props) {
     const { products } = props
-
-    const [post, setPost] = useState([])
-    useEffect(() => {
-        const getPost = async () => {
-            const res = await axios("/product");
-            setPost(res.data);
-        }
-        getPost()
-    }, []);
 
     return (
         <div>

@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Poppins:wght@100;200;300;400;600;800&display=swap');
+
 
 // Custom.scss
 // Option A: Include all of Bootstrap
@@ -8,7 +9,9 @@ $theme-colors: (
   "primary":    #3187ED,
   "secondary":  #00C6D7,
   "danger":     #ea1a0b,
-  "dark":       #000000
+  "dark":       #000000,
+  "info": #F8F8F8,
+  
 );
 // 
 
@@ -24,6 +27,21 @@ $theme-colors: (
 
 
 // fountfamily
+.popins{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: normal;
+}
+.popins-2{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+}
+.popins-3{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+}
 .popins-6{
   font-family: 'Poppins';
   font-style: normal;
@@ -36,13 +54,22 @@ font-size: 16px;
 .fs-24{
   font-size: 24px;
 }
+.fs-37{
+  font-size: 30px;
+}
 .fs-48{
   font-size: 48px;
   line-height: 72px;
 }
+.fs-54{
+  font-size: 54px;
+}
+.bs{
+  font-weight: bold;
+}
 // Then add additional custom code here
 .Danger{
-  color: $danger,;
+  color: $danger;
 }
 // margin
 .ml-5{
@@ -51,6 +78,9 @@ font-size: 16px;
 
 .bg-color-gry{
   background-color: #E5E5E5;
+}
+.bg-color-primary{
+  background-color: $primary;
 }
 
 

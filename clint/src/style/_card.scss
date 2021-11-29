@@ -42,16 +42,19 @@
   border-radius: 0.7rem !important;
   
 }
+.bg-primary{
+  background-color: $primary;
+}
 .text-reset{
   text-decoration: none;
 }
 // card border
 
 .border-light{
-  border-color: white;
+  border-color: white !important;
 }
 .border-none{
-  border: none;
+  border: none !important;
 }
 
 // text color
@@ -78,4 +81,21 @@
 .progressbar{
   border-radius: 40px;
   height: 10px !important;
+}
+
+// dots
+.dot {
+  width: 9.71px;
+  height: 9.71px;
+  border-radius: 50%;
+  border: 3px rgba(255, 255, 255, 0.22);
+  margin: 0 5px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.dot.active {
+  width: 21px;
+  height: 10px;
+  background: #FFFF;
+  border-radius: 28px;
 }

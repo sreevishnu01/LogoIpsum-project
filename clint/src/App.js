@@ -12,6 +12,7 @@ import { useSelector } from 'react-redux';
 import Login from './components/Authentication/Login'
 import Cart from "./components/cart/Cart";
 import Singleprodct from "./components/main/Singleprodct";
+import Footer from "./components/footer/Footer";
 
 
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/product/:id" component={Singleprodct} />
 
         </Switch>
+        <Footer />
       </Router>
 
     </>
