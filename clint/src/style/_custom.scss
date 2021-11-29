@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600&display=swap');
 
 // Custom.scss
 // Option A: Include all of Bootstrap
 
 
 $theme-colors: (
-  "primary":    #0074d9,
+  "primary":    #3187ED,
   "secondary":  #00C6D7,
-  "Danger": #ea1a0b,
+  "danger":     #ea1a0b,
+  "dark":       #000000
 );
+// 
 
 // "light":      $light,
 // "dark":       $dark
@@ -19,9 +22,27 @@ $theme-colors: (
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
+
+// fountfamily
+.popins-6{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+}
+.fs-16{
+font-size: 16px;
+}
+
+.fs-24{
+  font-size: 24px;
+}
+.fs-48{
+  font-size: 48px;
+  line-height: 72px;
+}
 // Then add additional custom code here
 .Danger{
-  color: #ea1a0b,;
+  color: $danger,;
 }
 // margin
 .ml-5{
@@ -31,3 +52,5 @@ $theme-colors: (
 .bg-color-gry{
   background-color: #E5E5E5;
 }
+
+

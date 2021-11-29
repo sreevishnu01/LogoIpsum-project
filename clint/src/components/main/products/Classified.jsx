@@ -31,15 +31,15 @@ function Classified(props) {
                             </Card>
                         </Col>
 
-                        {products.slice(0, 5).map(p => (
-                            <Col key={p._id} className="mt-5">
-                                <Card className="border-light col-sm-12 card-shadow card-grid-sm">
+                        {products.slice(0, 4).map(p => (
+                            <Col key={p._id} className="mt-5 mx-3">
+                                <Card className="border-none col-sm-12 card-shadow card-grid-sm">
                                     <Card.Img variant="bottom" src={randomImg.images} className="card-ct" />
                                     <Card.Body>
                                         <Card.Title >
                                             <Card.Link href="a" className="btn-link text-reset stretched-link" >{p.name}</Card.Link>
                                         </Card.Title>
-                                        <Card.Subtitle className="">$399.70</Card.Subtitle>
+                                        <Card.Subtitle className="">${p.price}</Card.Subtitle>
                                         <Card.Text>
                                         </Card.Text>
                                     </Card.Body>
