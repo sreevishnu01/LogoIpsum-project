@@ -9,7 +9,7 @@ function Cards() {
 
                 <Row className="mb-5">
                     <Col>
-                        <Card>
+                        <Card className="border-none">
                             <Card.Img src="/images/Rectangle10.png" alt="Card image" className="card-ct" />
                             <Card.ImgOverlay>
                                 <Card.Body className="mt-3 mx-3 text-white">
@@ -29,7 +29,7 @@ function Cards() {
                         </Card>
                     </Col>
                     <Col>
-                        <Card >
+                        <Card className="border-none">
                             <Card.Img src="/images/Rectangle2.png" alt="Card image" className="card-ct" />
                             <Card.ImgOverlay>
                                 <Card.Body className="mt-3 mx-3 text-white">
@@ -52,7 +52,7 @@ function Cards() {
 
                 <Row>
                     <Col>
-                        <Card >
+                        <Card className="border-none">
                             <Card.Img src="/images/Rectangle3.png" alt="Card image" className="card-ct" />
                             <Card.ImgOverlay>
                                 <Card.Body className="mt-3 mx-3 text-white">
@@ -70,7 +70,7 @@ function Cards() {
                         </Card>
                     </Col>
                     <Col>
-                        <Card >
+                        <Card className="border-none">
                             <Card.Img src="/images/Rectangle4.png" alt="Card image" className="card-ct" />
                             <Card.ImgOverlay>
                                 <Card.Body className="mt-3 mx-3 text-white">
