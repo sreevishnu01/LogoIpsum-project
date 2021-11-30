@@ -78,9 +78,9 @@ function Topbar() {
                         </Nav.Link>
                     </Nav>
                     {user.token ? (
-                        <Button variant="secondary" onClick={handellogout} className="secondary">Logout</Button>
+                        <Button variant="secondary" onClick={handellogout} className=" btn-normal secondary card-ct-low">Logout</Button>
                     ) : (
-                        <Button variant="secondary" className="secondary">Classifieds</Button>
+                        <Button variant="secondary" className="secondary card-ct-low">Classifieds</Button>
                     )}
 
 

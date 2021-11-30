@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Container, Card, Button } from 'react-bootstrap'
-import { BiChevronLeftCircle, BiChevronRightCircle } from "react-icons/bi";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 function Classified(props) {
     const { products } = props;
@@ -12,21 +12,22 @@ function Classified(props) {
     return (
         <>
             <Container fluid className="bg-color-gry">
-                <Card className="bg-color-gry border-none card-grid-lg">
+                <Card className="bg-color-gry border-none card-grid-lg ms-5">
 
                     <Row>
                         <Col className="mt-5">
                             <Card className="border-none col-sm-12 card-grid-sm bg-color-gry">
-                                <Card.Body>
-                                    <Card.Title>Classified product on the weeck</Card.Title>
+                                <Card.Body className="popins-6">
+                                    <Card.Title className="fs-37">Classified product on the weeck</Card.Title>
                                     <Card.Text className="mt-5 mb-5">
-                                        <Card.Link href="#" className="text-reset ml-5"><BiChevronLeftCircle size="2.5em" /></Card.Link>
-                                        <Card.Link href="#" className="text-reset ml-5"><BiChevronRightCircle size="2.5em" /></Card.Link>
+                                        <Card.Link href="#" className="text-reset "><FaAngleLeft className="icon-arrow" /></Card.Link>
+                                        <Card.Link href="#" className="text-reset ms-5"><FaAngleRight className="icon-arrow" /></Card.Link>
                                     </Card.Text>
 
 
 
-                                    <Button variant="secondary" className="secondary">Classifieds</Button>
+                                    <Button variant="secondary" className="secondary btn-explore card-ct-low">Explore
+                                        <FaAngleRight className="btn-arrow ms-3" /></Button>
                                 </Card.Body>
                             </Card>
                         </Col>

@@ -24,11 +24,11 @@ function Newsletter() {
 
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </Col>
-                        <Col className="pt-5">
-                            <Form className="position-relative">
+                        <Col className="pt-4">
+                            <Form className="position-relative form-btn-subscribe">
                                 <Image src="/images/circleElement.png" rounded className="circle-element-button  top-100 start-100 translate-middle" />
-                                <Form.Control size="lg" type="text" placeholder="Enter your email here" />
-                                <Button className="button-bg-gray position-button top-50  translate-middle">SUBSCRIBE</Button>
+                                <Form.Control size="lg" type="text" placeholder="Enter your email here" className="pt-3 pb-3 mb-3 card-ct-low" />
+                                <Button size="lg" id="btn-subscribe" className=" button-bg-gray position-button top-50  translate-middle">SUBSCRIBE</Button>
 
                             </Form>
                         </Col>

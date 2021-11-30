@@ -21,7 +21,7 @@
   border-radius: 30px !important;
 }
 .card-ct-low{
-  border-radius: 15px;
+  border-radius: 15px !important;
 }
 .card-ct-lg{
   border-radius: 40px;
@@ -51,7 +51,7 @@
 // card border
 
 .border-light{
-  border-color: white !important;
+  border-color: $white !important;
 }
 .border-none{
   border: none !important;

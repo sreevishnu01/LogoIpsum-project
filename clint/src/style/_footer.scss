@@ -18,23 +18,23 @@
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
-    color: #8D8D8D;
+    color: $gray-light;
 }
 .footer a{
     text-decoration: none;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    color: #8D8D8D;
+    color: $gray-light;
 }
 .social-box{
     width: 48px;
     height: 48px;
-    background: #F8F8F8;
+    background: $light;
     border-radius: 12px;
 }
 .social-bg{
-    color: #DADADA;
+    color: $light2;
 }
 
 // chat-button
@@ -71,7 +71,7 @@
 }
 
 .app-store-icon{
-    color: white;
+    color: $white;
     width: 30.13px;
     height: 38px;
     margin-top: 10px;

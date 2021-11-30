@@ -1,5 +1,4 @@
-@import "./custom";
-
+@use 'custom' as *;
 
 .top{
     color: violet;
@@ -9,14 +8,14 @@
     background-color: $primary;
     padding: 0 !important;
     height: 53px;
-    color: white;
+    color: $white;
 }
 .top-navbar{
     height: 120px;
 }
 .nav-buttonbg{
 
-    background-color: #F8F8F8;
+    background-color: $light;
     border-radius: 12px;
 }
 .navbar-iterm3{
@@ -27,9 +26,9 @@
 
 }
 .c-white{
-    color: white !important;
+    color: $white !important;
 }
 
 .c-white #basic-nav-dropdown{
-    color: white !important;
+    color: $white !important;
 }

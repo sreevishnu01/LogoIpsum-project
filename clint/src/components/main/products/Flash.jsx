@@ -13,7 +13,7 @@ function Flash(props) {
                     <Card.ImgOverlay>
                         <Row>
                             <Col sm={4}> <Card.Body >
-                                <Card.Title className="popins-6 fs-48 bs">Flash Sale</Card.Title>
+                                <Card.Title className="popins-6 fs-48">Flash Sale</Card.Title>
                                 <Card.Text className="fs-16">
                                     Lorem ipsum dolor sit amet, consectetur <br />
                                     adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore
@@ -66,7 +66,7 @@ function Flash(props) {
                                                 <div className="dot"></div>
                                             </div>
                                         </Card.Subtitle>
-                                        <Card.Subtitle className="popins bs">View more</Card.Subtitle>
+                                        <Card.Subtitle className="popins ">View more</Card.Subtitle>
 
                                     </div>
 

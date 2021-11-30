@@ -1,4 +1,4 @@
-
+@use 'custom' as *;
 
 // .carousels{  
 //     width: 100%;
@@ -18,4 +18,11 @@
 }
 .carousel .carousel-img{
     height: 489px !important;
+}
+
+.icon-arrow{
+    background-color: $white;
+    width: 53px;
+    height: 53px;
+    border-radius: 30px;
 }
