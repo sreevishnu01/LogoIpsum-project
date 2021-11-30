@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     cartitems: JSON.parse(localStorage.getItem("cartitem")) || [],
-    stock: 0,
     totalQuntity: JSON.parse(localStorage.getItem("totalQuntity")) || 0,
     totalAmount: JSON.parse(localStorage.getItem("totalAmount")) || 0,
 }
@@ -15,10 +14,11 @@ export const cartSlice = createSlice({
             const itermIndex = state.cartitems.findIndex((item) => item._id === action.payload._id);
             if (itermIndex >= 0) {
                 state.cartitems[itermIndex].cartQuantity += 1;
+                state.cartitems[itermIndex].stockQuntity -= 1;
                 localStorage.setItem('cartitem', JSON.stringify(state.cartitems))
             } else {
-
-                const productquntiy = { ...action.payload, cartQuantity: 1 }
+                const stockQuntity = action.payload.stock;
+                const productquntiy = { ...action.payload, cartQuantity: 1, stockQuntity: stockQuntity - 1 }
                 state.cartitems.push(productquntiy)
                 localStorage.setItem('cartitem', JSON.stringify(state.cartitems))
             }
@@ -36,6 +36,8 @@ export const cartSlice = createSlice({
             )
             if (state.cartitems[itermIndex].cartQuantity > 1) {
                 state.cartitems[itermIndex].cartQuantity -= 1
+                const stockQuntity = state.cartitems[itermIndex].stock += 1;
+                state.stockQuntity = stockQuntity
             } else if (state.cartitems[itermIndex].cartQuantity === 1) {
                 const nextCartiIterm = state.cartitems.filter(
                     (cartitem) => cartitem._id !== action.payload._id
@@ -59,8 +61,8 @@ export const cartSlice = createSlice({
             });
             state.totalQuntity = quatity;
             state.totalAmount = total;
-            localStorage.setItem('totalQuntity', JSON.stringify(state.totalQuntity))
-            localStorage.setItem('totalAmount', JSON.stringify(state.totalAmount))
+            // localStorage.setItem('totalQuntity', JSON.stringify(state.totalQuntity))
+            // localStorage.setItem('totalAmount', JSON.stringify(state.totalAmount))
         }
 
     }
