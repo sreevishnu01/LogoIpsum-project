@@ -19,7 +19,6 @@ function Cart() {
         // eslint-disable-next-line
     }, [cart])
     const handelRemove = (cartitem) => {
-        console.log(cartitem)
         dispatch(onRemov(cartitem))
     }
     return (

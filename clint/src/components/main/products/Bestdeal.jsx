@@ -31,7 +31,7 @@ function Bestdeal(props) {
                                         <Card className="border-light">
                                             <Card.Body className="p-0">
                                                 <Card.Title className="mb-4">
-                                                    <Card.Link href={`/product/${p._id}`} className="text-reset" >{p.name}</Card.Link>
+                                                    <Card.Link href={`/pdp/${p._id}`} className="text-reset" >{p.name}</Card.Link>
                                                 </Card.Title>
                                                 <Card.Subtitle className="text-primary">${p.price}</Card.Subtitle>
                                                 <Card.Text className="text-primary">
@@ -82,7 +82,7 @@ function Bestdeal(props) {
                                         <Card className="border-light">
                                             <Card.Body className="p-0">
                                                 <Card.Title className="mb-4">
-                                                    <Card.Link href={`/product/${p._id}`} className="text-reset" >{p.name}</Card.Link>
+                                                    <Card.Link href={`/pdp/${p._id}`} className="text-reset" >{p.name}</Card.Link>
                                                 </Card.Title>
                                                 <Card.Subtitle className="text-primary">${p.price}</Card.Subtitle>
                                                 <Card.Text className="text-primary">

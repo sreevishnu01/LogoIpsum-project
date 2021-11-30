@@ -18,7 +18,7 @@ function TemplateCard(props) {
                             <Card.Img variant="bottom" src={randomImg.images} className="card-ct" />
                             <Card.Body>
                                 <Card.Title className="mb-3 ">
-                                    <Card.Link href="a" className="btn-link text-reset stretched-link" >{p.name}</Card.Link>
+                                    <Card.Link href={`/pdp/${p._id}`} className="btn-link text-reset stretched-link" >{p.name}</Card.Link>
                                 </Card.Title>
                                 <Card.Subtitle className="text-primary popins-6 fs-24 mb-2">${p.price}</Card.Subtitle>
                                 <div className="d-flex justify-content-between">

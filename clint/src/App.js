@@ -25,11 +25,11 @@ function App() {
       <Router>
         <Topbar />
         <Switch>
-          <Route path="/" exact>{user ? <Home /> : <Login />}</Route>
+          <Route path="/" exact >{user ? <Home /> : <Login />}</Route>
           <Route path="/home" component={Home} />
           <Route path="/cart" component={Cart} />
           <Route path="/signin" component={Signin} />
-          <Route path="/product/:id" component={Singleprodct} />
+          <Route path="/pdp/:id" exact component={Singleprodct} />
 
         </Switch>
         <Footer />

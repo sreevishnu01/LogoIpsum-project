@@ -9,7 +9,7 @@ function Singleprodct() {
 
     const location = useLocation()
     const path = location.pathname.split("/")[2];
-    const [post, setPost] = useState([])
+    const [post, setPost] = useState({})
     const [cart, setCart] = useState([])
     const dispatch = useDispatch();
     const carts = useSelector(state => state.cart.cartitems);
@@ -20,8 +20,6 @@ function Singleprodct() {
         })
         if (data != null) {
             setCart(data)
-        } else {
-            // console.log(data)
         }
     }
     getCartIterm()
@@ -40,8 +38,6 @@ function Singleprodct() {
         getPost()
 
     }, [path]);
-
-    console.log(cart.name)
     return (
         <div>
             <Container>
