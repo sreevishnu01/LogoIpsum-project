@@ -14,9 +14,9 @@
     height: 120px;
 }
 .nav-buttonbg{
-
     background-color: $light;
     border-radius: 12px;
+    margin-right: 5px;
 }
 .navbar-iterm3{
     padding-right: 5.5rem;
@@ -31,4 +31,19 @@
 
 .c-white #basic-nav-dropdown{
     color: $white !important;
+}
+// search form
+
+.top-navbar .search-form{
+    background-color: $light;
+    border: none;
+    border-radius: 12px;
+    width: 400px;
+}
+#search-btn{
+    position: absolute;
+    padding: 0;
+    top: 10%;
+    right: 5%;
+    color: $primary;
 }

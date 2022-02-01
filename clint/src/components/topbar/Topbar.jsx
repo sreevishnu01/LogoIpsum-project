@@ -1,6 +1,6 @@
 import React from 'react'
 import { Nav, Navbar, NavDropdown, Container, Button, Form, FormControl } from 'react-bootstrap'
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaHeart, FaShoppingCart, FaUser } from "react-icons/fa"
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaHeart, FaShoppingCart, FaUser, FaSearch } from "react-icons/fa"
 import { useSelector, useDispatch } from 'react-redux';
 import { logOut } from '../../redux/auth';
 // import { BsCurrencyDollar } from "react-icons/bs";
@@ -57,14 +57,16 @@ function Topbar() {
                         <NavDropdown title="Classifieds" id="basic-nav-dropdown" className="nav-buttonbg">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                         </NavDropdown>
-                        <Form className="d-flex">
+                        <Form className="d-flex position-relative">
                             <FormControl
                                 type="search"
                                 placeholder="Search here..."
-                                className="me-2"
+                                className="me-2 search-form"
                                 aria-label="Search"
                             />
-                            <Button variant="outline-success">Search</Button>
+                            <Button variant="outline-success" id='search-btn'>
+                                <FaSearch />
+                            </Button>
                         </Form>
                     </Nav>
                     <Nav className="navbar-iterm3 mr-5">
