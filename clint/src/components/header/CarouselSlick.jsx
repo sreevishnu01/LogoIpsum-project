@@ -11,7 +11,7 @@ function CarouselSlick() {
         centerPadding: "160px",
         slidesToShow: 1,
         speed: 500,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 5000,
         arrows: false,
         customPaging: i => {

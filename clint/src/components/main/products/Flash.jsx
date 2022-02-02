@@ -1,15 +1,16 @@
 import React from 'react'
 import { Container, Row, Col, Card, ProgressBar } from 'react-bootstrap'
-
+import data from '../../../Assets/data';
 
 function Flash(props) {
 
-    const { products } = props
+    // const { products } = props
+    const products = data.flash
     return (
         <div>
             <Container>
                 <Card lg={12} className="border-none text-white mt-5 bg-primary">
-                    <Card.Img src="/images/flash.png" alt="Card image" className="card-ct" />
+                    <Card.Img style={{ height: '351px' }} src="/images/flash.png" alt="Card image" className="card-ct" />
                     <Card.ImgOverlay>
                         <Row>
                             <Col sm={4}> <Card.Body >
@@ -26,12 +27,12 @@ function Flash(props) {
                                     {products.slice(0, 2).map(p => (
                                         <Col key={p._id} className="mt-5">
 
-                                            <Card className="border-light mb-4 popins card-ct-low">
+                                            <Card style={{ width: '405px', height: '165px' }} className="border-light mb-4 popins card-ct-low">
                                                 <Row >
-                                                    <Col className="p-0">
-                                                        <Card className="border-none ">
-                                                            <Card.Img src={p.img} className="card-ct-low" />
-                                                        </Card>
+                                                    <Col sm={4} className="p-0 center">
+                                                        <div>
+                                                            <img src={p.img} alt="img" />
+                                                        </div>
                                                     </Col>
                                                     <Col className="p-0">
                                                         <Card.Body className="m-2">
@@ -45,8 +46,6 @@ function Flash(props) {
                                                             </div>
                                                             <ProgressBar now={60} className="progressbar" />
                                                         </Card.Body>
-
-
 
                                                     </Col>
 

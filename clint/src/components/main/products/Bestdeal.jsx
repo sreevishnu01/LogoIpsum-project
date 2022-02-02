@@ -1,11 +1,14 @@
 import { Container, Row, Col, Card } from "react-bootstrap"
 import { IconContext } from "react-icons";
 import { FaStar } from "react-icons/fa"
+import data from "../../../Assets/data";
 
 
 
 function Bestdeal(props) {
-    const { products } = props
+    // const { products } = props
+    const products = data.best
+
 
     return (
         <div>
@@ -23,7 +26,7 @@ function Bestdeal(props) {
 
                                     <Col className="p-0">
                                         <Card className="border-light">
-                                            <Card.Img src={p.img} />
+                                            <Card.Img src={`${process.env.PUBLIC_URL} ${p.img}`} />
                                         </Card>
 
                                     </Col>
@@ -74,7 +77,7 @@ function Bestdeal(props) {
 
                                     <Col className="p-0">
                                         <Card className="border-light">
-                                            <Card.Img src={p.img} />
+                                            <Card.Img src={`${process.env.PUBLIC_URL} ${p.img}`} />
                                         </Card>
 
                                     </Col>
@@ -84,6 +87,7 @@ function Bestdeal(props) {
                                                 <Card.Title className="mb-4">
                                                     <Card.Link href={`/pdp/${p._id}`} className="text-reset" >{p.name}</Card.Link>
                                                 </Card.Title>
+
                                                 <Card.Subtitle className="text-primary">${p.price}</Card.Subtitle>
                                                 <Card.Text className="text-primary">
                                                     review

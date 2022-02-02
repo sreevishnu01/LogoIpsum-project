@@ -1,9 +1,12 @@
-import React from 'react'
-import { Row, Col, Card } from 'react-bootstrap'
-import { FaStar } from "react-icons/fa"
+import React from 'react';
+import { Row, Col, Card } from 'react-bootstrap';
+import { FaStar } from "react-icons/fa";
+import data from '../../../Assets/data';
 
 function TemplateCard(props) {
-    const { products } = props
+    // const { products } = props;
+    const products = data.products
+
     const randomImg = {
         imagel: 'https://picsum.photos/1600/370',
         images: 'https://picsum.photos/100',

@@ -47,5 +47,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://sleepingwoods.herokuapp.com"
+  "proxy": "http://localhost:3400/"
 }

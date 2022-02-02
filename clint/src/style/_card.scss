@@ -32,6 +32,15 @@
 .card-md{
   height: 466px;
 }
+.card-img-fit{
+  width: 273px;
+  height: 247px;
+}
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 // card background color
 
 .card-bg-img{
@@ -46,7 +55,7 @@
   background-color: $primary;
 }
 .text-reset{
-  text-decoration: none;
+  text-decoration: none !important;
 }
 // card border
 
@@ -61,6 +70,9 @@
 
 .text-primary{
   color: $primary;
+}
+.text-secondary{
+  color: $secondary;
 }
 .popins .card-title{
   font-family: 'Poppins';

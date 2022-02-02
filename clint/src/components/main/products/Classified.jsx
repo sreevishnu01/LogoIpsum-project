@@ -1,9 +1,11 @@
 import React from 'react'
 import { Row, Col, Container, Card, Button } from 'react-bootstrap'
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import data from '../../../Assets/data';
 
 function Classified(props) {
-    const { products } = props;
+    // const { products } = props;
+    const products = data.products
     const randomImg = {
         imagel: 'https://picsum.photos/1000/750',
         images: 'https://picsum.photos/100',
@@ -34,13 +36,13 @@ function Classified(props) {
 
                         {products.slice(0, 4).map(p => (
                             <Col key={p._id} className="mt-5 mx-3">
-                                <Card className="border-none col-sm-12 card-shadow card-grid-sm">
-                                    <Card.Img variant="bottom" src={randomImg.images} className="card-ct" />
+                                <Card style={{ height: '345px' }} className="border-none col-sm-12 card-shadow card-grid-sm popins">
+                                    <Card.Img variant="bottom" src={`${process.env.PUBLIC_URL} ${p.img}`} className="card-ct card-img-fit" />
                                     <Card.Body>
                                         <Card.Title >
-                                            <Card.Link href="a" className="btn-link text-reset stretched-link" >{p.name}</Card.Link>
+                                            <Card.Link href="a" className="btn-link text-reset" >{p.name}</Card.Link>
                                         </Card.Title>
-                                        <Card.Subtitle className="">${p.price}</Card.Subtitle>
+                                        <Card.Subtitle className="text-secondary pt-1">${p.price}</Card.Subtitle>
                                         <Card.Text>
                                         </Card.Text>
                                     </Card.Body>
